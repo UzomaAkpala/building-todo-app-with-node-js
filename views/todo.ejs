@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+    <script src="/assets/todo-list.js"></script>
   </head>
   <body>
     <div>
@@ -19,9 +20,9 @@
     </div>
 
     <ul>
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
+      <% for (var i = 0; i < todos.length; i++) { %>
+      <li><%= todos[i].item %></li>
+      <% } %>
     </ul>
   </body>
 </html>
